@@ -93,3 +93,7 @@ Build at: 2022-09-04T05:51:47.282Z - Hash: 39bac4c8571c7f1e - Time: 5953ms
 
 √ Compiled successfully.
 ```
+
+Ελέγξτε τη λειτουργία του frontend:
+
+![](img/angular-frontend.png)
