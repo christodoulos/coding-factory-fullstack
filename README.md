@@ -62,6 +62,10 @@ Press CTRL+C to quit
  * Debugger PIN: 739-267-897
 ```
 
+Ελέγξτε τη λειτουργία του backend:
+
+![](img/flask-backend.png)
+
 ### Εγκατάσταση πακέτων για το frontend
 
 Στον κατάλογο `coding-factory-fullstack`:
