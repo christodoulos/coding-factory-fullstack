@@ -45,7 +45,6 @@ SECRET_KEY="a long, compicated, and hard to guess string"
 MONGODB_SETTINGS_USERNAME="<your atlas admin username>"
 MONGODB_SETTINGS_PASSWORD="<your atlas admin password>"
 MONGODB_SETTINGS_HOST="mongodb+srv://<your atlas cluster url>/<db name>?retryWrites=true&w=majority"
-MONGODB_SETTINGS_DB="<db name>"
 ```
 
 Στη συνέχεια στον κατάλογο `backend`:
