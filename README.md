@@ -7,10 +7,12 @@
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
-- Θυμηθείτε ή αλλάξτε το password του χρήστη διαχειριστή της υπηρεσίας Atlas:
+- Θυμηθείτε ή αλλάξτε το password του χρήστη διαχειριστή της υπηρεσίας Atlas (χρησιμοποιήστε τα στοιχεία παρακάτω στο αρχείο `.env`):
   ![](img/atlas-admin.png)
 - Για τη διευκόλυνσή σας κατά τη διάρκεια της ανάπτυξης επιτρέψτε τις δικτυακές συνδέσεις από παντού:
   ![](img/atlas-network.png)
+- Σημειώστε το connection string και χρησιμοποιήστε το παρακάτω στο αρχείο `.env`.
+  ![](img/atlas-connect.png)
 
 ### Εγκατάσταση τοπικά
 
@@ -37,7 +39,7 @@ $ pip install -r requirements.txt
 SECRET_KEY="a long, compicated, and hard to guess string"
 MONGODB_SETTINGS_USERNAME="<your atlas admin username>"
 MONGODB_SETTINGS_PASSWORD="<your atlas admin password>"
-MONGODB_SETTINGS_HOST="mongodb+srv://<your atlas cluster url>/<db name>"
+MONGODB_SETTINGS_HOST="mongodb+srv://<your atlas cluster url>/<db name>?retryWrites=true&w=majority"
 MONGODB_SETTINGS_DB="<db name>"
 ```
 

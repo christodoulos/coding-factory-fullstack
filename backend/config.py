@@ -11,5 +11,4 @@ class Config:
         "username": environ.get("MONGODB_SETTINGS_USERNAME"),
         "password": environ.get("MONGODB_SETTINGS_PASSWORD"),
         "host": environ.get("MONGODB_SETTINGS_HOST"),
-        "db": environ.get("MONGODB_SETTINGS_DB"),
     }
