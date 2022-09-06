@@ -1,0 +1,39 @@
+<p>User Registration Form</p>
+
+<form [formGroup]="form">
+  <p>
+    <label>First Name: </label>
+    <input formControlName="firstName" />
+  </p>
+  <p>
+    <label>Last Name: </label>
+    <input formControlName="lastName" />
+  </p>
+  <p>
+    <label>Email: </label>
+    <input formControlName="email" />
+  </p>
+  <p>
+    <label>Password: </label>
+    <input formControlName="password" />
+  </p>
+  <p>
+    <label>Repeat Password: </label>
+    <input formControlName="repeatPassword" />
+  </p>
+</form>
+
+<p>
+  <button (click)="onSubmit()">Submit Form</button>
+</p>
+
+<p>{{ form.valid }}</p>
+<p>
+  {{ this.form.controls.firstName.value }}
+</p>
+<p>
+  {{ this.form.controls.lastName.value }}
+</p>
+<p>
+  {{ this.form.controls.email.value }}
+</p>
