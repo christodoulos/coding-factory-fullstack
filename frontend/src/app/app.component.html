@@ -6,4 +6,12 @@
 
 <p>Please enter your name: <input [(ngModel)]="username" /></p>
 
-<app-user-info [username]="username"></app-user-info>
+<app-user-info
+  *ngIf="username; else nousername"
+  [username]="username"
+  (userage)="onUserAge($event)"
+></app-user-info>
+
+<ng-template #nousername>No username entered</ng-template>
+
+<app-user-list *ngIf="users.length" [users]="users"></app-user-list>

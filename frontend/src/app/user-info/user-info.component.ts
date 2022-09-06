@@ -1,17 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-info',
   templateUrl: './user-info.component.html',
   styleUrls: ['./user-info.component.css'],
 })
-export class UserInfoComponent implements OnInit {
+export class UserInfoComponent {
   @Input() username = '';
-  constructor() {}
-
-  ngOnInit(): void {}
+  @Output() userage = new EventEmitter<number>();
+  age = 0;
 
   nameLength() {
     return this.username.length;
+  }
+
+  onClick() {
+    this.userage.emit(this.age);
   }
 }

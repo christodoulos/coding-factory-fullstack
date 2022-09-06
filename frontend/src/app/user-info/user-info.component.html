@@ -1,5 +1,11 @@
 <hr />
+
 <p>
   Hello <span>{{ username }}</span>
 </p>
+
 <p>Your name is {{ nameLength() }} characters long</p>
+
+<p>Please enter your age <input [(ngModel)]="age" /></p>
+
+<p><button (click)="onClick()">Submit Age</button></p>
