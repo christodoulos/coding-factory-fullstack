@@ -5,6 +5,10 @@
 - Python Flask backend με χρήση του MongoEngine και της υπηρεσίας Atlas (MongoDB as a Service)
 - Angular frontend
 
+Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μέχρι στιγμής υπάρχουν τα παρακάτω:
+
+- [Angular Components, Input και Outpt](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput)
+
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
 - Θυμηθείτε ή αλλάξτε το password του χρήστη διαχειριστή της υπηρεσίας Atlas (χρησιμοποιήστε τα στοιχεία παρακάτω στο αρχείο `.env`):
