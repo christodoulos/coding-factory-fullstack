@@ -7,7 +7,7 @@
 
 Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μέχρι στιγμής υπάρχουν τα παρακάτω:
 
-- [Angular Components, Input και Outpt](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput)
+- [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
