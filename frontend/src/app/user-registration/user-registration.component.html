@@ -27,13 +27,24 @@
   <button (click)="onSubmit()">Submit Form</button>
 </p>
 
-<p>{{ form.valid }}</p>
+<p>Form Valid: {{ form.valid }}</p>
 <p>
-  {{ this.form.controls.firstName.value }}
+  First Name: {{ this.form.controls.firstName.value }} <br>
+  First Name Errors: {{ controlError('firstName') | json }}
 </p>
 <p>
-  {{ this.form.controls.lastName.value }}
+  Last Name: {{ this.form.controls.lastName.value }} <br>
+  Last Name Errors: {{ controlError('lastName') | json }}
 </p>
 <p>
-  {{ this.form.controls.email.value }}
+  Email: {{ this.form.controls.email.value }} <br>
+  Email Errors: {{ controlError('email') | json }}
+</p>
+<p>
+  Password: {{ this.form.controls.password.value }} <br>
+  Password Errors: {{ controlError('password') | json }}
+</p>
+<p>
+  Repeat Password: {{ this.form.controls.repeatPassword.value }} <br>
+  Repeat Password Errors: {{ controlError('repeatPassword') | json }}
 </p>
