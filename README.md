@@ -9,7 +9,7 @@
 
 - 1η Εβδομάδα: [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 - 2η Εβδομάδα:
-  - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss)
+  - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss) (merged in develop)
 
 Branches που συμβάλλουν στην τελική εφαρμογή θα γίνονται merge πίσω στο branch [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop).
 
