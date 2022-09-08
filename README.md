@@ -9,6 +9,8 @@
 
 - [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 
+Branches που συμβάλλουν στην τελική εφαρμογή θα γίνονται merge πίσω στο branch main.
+
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
 - Θυμηθείτε ή αλλάξτε το password του χρήστη διαχειριστή της υπηρεσίας Atlas (χρησιμοποιήστε τα στοιχεία παρακάτω στο αρχείο `.env`):
