@@ -7,7 +7,7 @@
 
 Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μέχρι στιγμής υπάρχουν τα παρακάτω:
 
-- [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
+- 1η Εβδομάδα: [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 
 Branches που συμβάλλουν στην τελική εφαρμογή θα γίνονται merge πίσω στο branch [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop).
 
