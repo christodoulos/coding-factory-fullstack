@@ -8,22 +8,22 @@
 Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μετά την κλωνοποίηση του main repository:
 
 ```
-git clone https://github.com/christodoulos/coding-factory-fullstack.git
+$ git clone https://github.com/christodoulos/coding-factory-fullstack.git
 ```
 
 μπορείτε να κάνετε checkout τα διάφορα branches έτσι ώστε να αλλάζει ο κώδικας τοπικά στη μορφή που είχε κατά τη διάρκεια της διάλεξης. Π.χ., για checkout του branch `components-input-output` δώστε (μέσα στον κατάλογο `coding-factory-fullstack`):
 
 ```
-git checkout -b components-input-output origin/components-input-output
+$ git checkout -b components-input-output origin/components-input-output
 ```
+
+Branches που συμβάλλουν στην τελική εφαρμογή θα γίνονται merge πίσω στο branch [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop).
 
 Μέχρι στιγμής υπάρχουν τα παρακάτω branches:
 
 - 1η Εβδομάδα: [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 - 2η Εβδομάδα:
   - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss) (merged in develop)
-
-Branches που συμβάλλουν στην τελική εφαρμογή θα γίνονται merge πίσω στο branch [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop).
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
