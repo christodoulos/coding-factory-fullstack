@@ -5,7 +5,19 @@
 - Python Flask backend με χρήση του MongoEngine και της υπηρεσίας Atlas (MongoDB as a Service)
 - Angular frontend
 
-Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μέχρι στιγμής υπάρχουν τα παρακάτω:
+Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μετά την κλωνοποίηση του main repository:
+
+```
+git clone https://github.com/christodoulos/coding-factory-fullstack.git
+```
+
+μπορείτε να κάνετε checkout τα διάφορα branches έτσι ώστε να αλλάζει ο κώδικας τοπικά στη μορφή που είχε κατά τη διάρκεια της διάλεξης. Π.χ., για checkout του branch `components-input-output` δώστε (μέσα στον κατάλογο `coding-factory-fullstack`):
+
+```
+git checkout -b components-input-output origin/components-input-output
+```
+
+Μέχρι στιγμής υπάρχουν τα παρακάτω branches:
 
 - 1η Εβδομάδα: [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 - 2η Εβδομάδα:
