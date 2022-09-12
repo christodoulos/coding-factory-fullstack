@@ -1,19 +1,16 @@
-<app-user-registration></app-user-registration>
-
 <h1>Welcome to Angular</h1>
 
 <h2>
   This is the <span>{{ title }}</span> application
 </h2>
 
-<p>Please enter your name: <input [(ngModel)]="username" /></p>
+<p>
+  Application Menu:
+  <a routerLink="">Home</a> &nbsp;
+  <a routerLink="user-info">User info</a> &nbsp;
+  <a routerLink="register">User registration</a>
+</p>
 
-<app-user-info
-  *ngIf="username; else nousername"
-  [username]="username"
-  (userage)="onUserAge($event)"
-></app-user-info>
-
-<ng-template #nousername>No username entered</ng-template>
-
-<app-user-list *ngIf="users.length" [users]="users"></app-user-list>
+<hr />
+<router-outlet></router-outlet>
+<hr />
