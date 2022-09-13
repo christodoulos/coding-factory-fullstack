@@ -2,15 +2,17 @@
   <div class="m-auto w-1/2">
     <lib-ngx-topbar
       [brand]="'Announcements'"
-      (selection)="onSelection($event)"
+      (selection)="onTopSelection($event)"
     ></lib-ngx-topbar>
     <lib-ngx-button
       [label]="'Submit'"
       [notAllowed]="true"
       (clicked)="onClicked()"
     ></lib-ngx-button>
-    <div class="w-3/4">
-      <lib-ngx-left-menu></lib-ngx-left-menu>
+    <div class="w-1/3">
+      <lib-ngx-left-menu
+        (selection)="onLeftSelection($event)"
+      ></lib-ngx-left-menu>
     </div>
     <!-- <div class="flex flex-col">
       <div class="flex flex-row items-center">

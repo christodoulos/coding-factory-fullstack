@@ -1,0 +1,22 @@
+<div>
+  <label class="block text-sm font-semibold text-gray-700">
+    {{ label }} <sup *ngIf="required">*</sup></label
+  >
+  <div class="mt-1">
+    <input
+      [formControl]="control"
+      type="{{ type }}"
+      class="{{
+        (control.dirty || control.touched) && control.errors
+          ? ' w-full border-red-300 text-red-500 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500'
+          : 'focus:border-indigo-500  w-full border-gray-300'
+      }}"
+    />
+  </div>
+  <p
+    *ngIf="(control.dirty || control.touched) && control.errors"
+    class="mt-2 text-sm text-red-600"
+  >
+    {{ getError(control) }}
+  </p>
+</div>

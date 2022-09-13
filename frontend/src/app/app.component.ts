@@ -14,7 +14,11 @@ export class AppComponent {
     alert('Button Clicked');
   }
 
-  onSelection(selection: string) {
+  onTopSelection(selection: string) {
+    alert(selection);
+  }
+
+  onLeftSelection(selection: string) {
     alert(selection);
   }
 }
