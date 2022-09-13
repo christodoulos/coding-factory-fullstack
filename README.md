@@ -23,6 +23,7 @@ Branches που συμβάλλουν στην τελική εφαρμογή θα
 
 - 1η Εβδομάδα: [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 - 2η Εβδομάδα:
+  - [Angular routing](https://github.com/christodoulos/coding-factory-fullstack/tree/routing/frontend/src/app)
   - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss) (merged in develop)
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
