@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { UiComponent } from './ui.component';
 import { NgxButtonComponent } from './ngx-button/ngx-button.component';
 import { NgxTopbarComponent } from './ngx-topbar/ngx-topbar.component';
@@ -14,7 +16,7 @@ import { NgxInputComponent } from './ngx-input/ngx-input.component';
     NgxLeftMenuComponent,
     NgxInputComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   exports: [
     UiComponent,
     NgxButtonComponent,

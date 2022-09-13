@@ -34,9 +34,9 @@ export class NgxInputComponent implements ControlValueAccessor {
     private controlContainer: ControlContainer
   ) {}
 
-  // getError(control: FormControl) {
-  //   return this.service.getError(control);
-  // }
+  getError(control: FormControl) {
+    return this.service.getError(control);
+  }
 
   get control() {
     return (
