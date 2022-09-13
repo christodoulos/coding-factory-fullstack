@@ -1,6 +1,12 @@
 <div class="flex h-screen">
-  <div class="m-auto w-96">
-    <div class="flex flex-col">
+  <div class="m-auto w-1/2">
+    <lib-ngx-topbar [brand]="'Announcements'" [menu]="menu"></lib-ngx-topbar>
+    <lib-ngx-button
+      [label]="'Submit'"
+      [notAllowed]="true"
+      (clicked)="onClicked()"
+    ></lib-ngx-button>
+    <!-- <div class="flex flex-col">
       <div class="flex flex-row items-center">
         <div class="p-2 text-center text-white font-bold bg-indigo-500">
           This is the <span class="text-red-300">{{ title }}</span> application
@@ -14,7 +20,8 @@
         These DIVs are centered horizontally and vertically without the use of a
         stylesheet!
       </div>
-      <lib-ngx-button></lib-ngx-button>
+      
     </div>
+   -->
   </div>
 </div>

@@ -7,3 +7,4 @@ export * from './lib/ui.component';
 export * from './lib/ui.module';
 
 export * from './lib/ngx-button/ngx-button.component';
+export * from './lib/ngx-topbar/ngx-topbar.component';
