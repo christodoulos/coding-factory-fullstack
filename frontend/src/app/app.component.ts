@@ -13,4 +13,8 @@ export class AppComponent {
   onClicked() {
     alert('Button Clicked');
   }
+
+  onSelection(selection: string) {
+    alert(selection);
+  }
 }

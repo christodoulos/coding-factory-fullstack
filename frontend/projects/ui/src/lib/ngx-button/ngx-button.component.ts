@@ -7,9 +7,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class NgxButtonComponent {
   @Input() label = 'Label';
   @Input() notAllowed = false;
-  @Output() clicked = new EventEmitter<boolean>();
+  @Output() clicked = new EventEmitter();
 
   onClick() {
-    this.clicked.emit(true);
+    this.clicked.emit();
   }
 }
