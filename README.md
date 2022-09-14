@@ -25,6 +25,9 @@ Branches που συμβάλλουν στην τελική εφαρμογή θα
 - 2η Εβδομάδα:
   - [Angular routing](https://github.com/christodoulos/coding-factory-fullstack/tree/routing/frontend/src/app)
   - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss) (merged in develop)
+  - Angular libraries
+    - [UI library](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/projects/ui/src/lib): Βιβλιοθήκη με βασικά παραμετροποιημένα components εμφάνισης, όπως κουμπιά, μενού, πεδία φόρμας κτλ
+    - [UI library demo](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/src/app)
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
