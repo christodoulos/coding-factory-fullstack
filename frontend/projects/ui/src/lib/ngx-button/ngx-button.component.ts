@@ -10,6 +10,6 @@ export class NgxButtonComponent {
   @Output() clicked = new EventEmitter();
 
   onClick() {
-    this.clicked.emit();
+    if (!this.notAllowed) this.clicked.emit();
   }
 }

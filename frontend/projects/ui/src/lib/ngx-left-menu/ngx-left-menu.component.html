@@ -2,7 +2,8 @@
   <li
     *ngFor="let item of menu"
     class="p-2 max-w-fit font-semibold hover:text-gray-600 hover:bg-gray-300 cursor-pointer"
+    (click)="onClick(item)"
   >
-    <span (click)="onClick(item)"> {{ item }}</span>
+    {{ item }}
   </li>
 </ul>

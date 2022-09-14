@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'frontend';
+  brand = 'Announcements';
 
-  menu = ['Menu1', 'Menu2', 'menu3'];
+  selections = [
+    { key: '1', value: 'Option 1' },
+    { key: '2', value: 'Option 2' },
+    { key: '3', value: 'Option 3' },
+  ];
+
+  form = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    selection: new FormControl('', [Validators.required]),
+  });
 
   onClicked() {
     alert('Button Clicked');
@@ -20,5 +31,11 @@ export class AppComponent {
 
   onLeftSelection(selection: string) {
     alert(selection);
+  }
+
+  onSubmit() {
+    alert(
+      `Name: ${this.form.controls.name.value}, Email: ${this.form.controls.email.value}, Selection: ${this.form.controls.selection.value}`
+    );
   }
 }

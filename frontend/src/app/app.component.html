@@ -1,35 +1,58 @@
 <div class="flex h-screen">
   <div class="m-auto w-1/2 flex flex-col space-y-2">
     <lib-ngx-topbar
-      [brand]="'Announcements'"
+      [brand]="brand"
       (selection)="onTopSelection($event)"
     ></lib-ngx-topbar>
-    <lib-ngx-button
-      [label]="'Submit'"
-      [notAllowed]="true"
-      (clicked)="onClicked()"
-    ></lib-ngx-button>
+
+    <lib-ngx-button [label]="'Submit'" (clicked)="onClicked()"></lib-ngx-button>
 
     <lib-ngx-left-menu
       (selection)="onLeftSelection($event)"
     ></lib-ngx-left-menu>
 
-    <!-- <div class="flex flex-col">
-      <div class="flex flex-row items-center">
-        <div class="p-2 text-center text-white font-bold bg-indigo-500">
-          This is the <span class="text-red-300">{{ title }}</span> application
-        </div>
-        <div class="p-2 text-center text-white font-bold bg-slate-500">
-          We just installed
-          <a href="https://tailwindcss.com/">tailwindcss</a>
-        </div>
-      </div>
-      <div class="p-2 text-center bg-green-300">
-        These DIVs are centered horizontally and vertically without the use of a
-        stylesheet!
-      </div>
-      
+    <div class="flex flex-col space-y-2">
+      <lib-ngx-heading [text]="'Example Form'"></lib-ngx-heading>
+      <form [formGroup]="form">
+        <lib-ngx-input
+          [label]="'Enter your name'"
+          formControlName="name"
+        ></lib-ngx-input>
+        <lib-ngx-input
+          [label]="'Enter your Email'"
+          formControlName="email"
+        ></lib-ngx-input>
+        <lib-ngx-select
+          [label]="'Select an option'"
+          formControlName="selection"
+          [selections]="selections"
+        ></lib-ngx-select>
+      </form>
+      <lib-ngx-button
+        [label]="'Submit'"
+        [notAllowed]="!form.valid"
+        (clicked)="onSubmit()"
+      ></lib-ngx-button>
     </div>
-   -->
+
+    <div *ngIf="form.valid" class="flex flex-col space-y-2">
+      <lib-ngx-heading [text]="'Form Value'"></lib-ngx-heading>
+      <div class="flex flex-row">
+        <div class="text-right bg-indigo-500 text-white p-1">
+          <ul>
+            <li>Name</li>
+            <li>Email</li>
+            <li>Selection</li>
+          </ul>
+        </div>
+        <div class="p-1">
+          <ul>
+            <li>{{ this.form.controls.name.value }}</li>
+            <li>{{ this.form.controls.name.value }}</li>
+            <li>{{ this.form.controls.selection.value }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
