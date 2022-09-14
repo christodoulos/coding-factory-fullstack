@@ -8,13 +8,13 @@
 Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μετά την κλωνοποίηση του main repository:
 
 ```
-$ git clone https://github.com/christodoulos/coding-factory-fullstack.git
+git clone https://github.com/christodoulos/coding-factory-fullstack.git
 ```
 
 μπορείτε να κάνετε checkout τα διάφορα branches έτσι ώστε να αλλάζει ο κώδικας τοπικά στη μορφή που είχε κατά τη διάρκεια της διάλεξης. Π.χ., για checkout του branch `components-input-output` δώστε (μέσα στον κατάλογο `coding-factory-fullstack`):
 
 ```
-$ git checkout -b components-input-ouput origin/components-input-ouput
+git checkout -b components-input-ouput origin/components-input-ouput
 ```
 
 Branches που συμβάλλουν στην τελική εφαρμογή θα γίνονται merge πίσω στο branch [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop).
