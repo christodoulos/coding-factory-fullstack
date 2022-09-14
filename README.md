@@ -2,8 +2,8 @@
 
 ## Ανάπτυξη fullstack web εφαρμογής
 
-- Python Flask backend με χρήση του MongoEngine και της υπηρεσίας Atlas (MongoDB as a Service)
-- Angular frontend
+- Python Flask [backend](https://github.com/christodoulos/coding-factory-fullstack/tree/develop/backend) με χρήση του MongoEngine και της υπηρεσίας Atlas (MongoDB as a Service)
+- Angular [frontend](https://github.com/christodoulos/coding-factory-fullstack/tree/develop/frontend)
 
 Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μετά την κλωνοποίηση του main repository:
 
