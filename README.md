@@ -46,6 +46,8 @@ Branches που συμβάλλουν στην τελική εφαρμογή θα
   - Angular libraries (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop))
     - [UI library](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/projects/ui/src/lib): Βιβλιοθήκη με βασικά παραμετροποιημένα components εμφάνισης, όπως κουμπιά, μενού, πεδία φόρμας κτλ
     - [UI library demo](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/src/app)
+- 3η Εβδομάδα:
+  - [Flask backend](https://github.com/christodoulos/coding-factory-fullstack/tree/backend) (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop)): Όλα τα FLASK endpoints που εξυπηρετούν τα HTTP Angular services του frontend.
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
