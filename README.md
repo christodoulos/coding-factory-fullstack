@@ -5,7 +5,25 @@
 - Python Flask [backend](https://github.com/christodoulos/coding-factory-fullstack/tree/develop/backend) με χρήση του MongoEngine και της υπηρεσίας Atlas (MongoDB as a Service)
 - Angular [frontend](https://github.com/christodoulos/coding-factory-fullstack/tree/develop/frontend)
 
-Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Μετά την κλωνοποίηση του main repository:
+Αναζητήστε στα διάφορα branches όλα αυτά που αναπτύσσουμε κατά τη διάρκεια των διαλέξεων. Κάθε branch αναπτύσσεται αυτόνομα έτσι ώστε να μην υπάρχουν merge conflicts στο develop branch. H λογική του branching αποτυπώνεται παρακάτω:
+
+```mermaid
+flowchart TB
+    main --> components-input-output
+    components-input-output --> components-input-output...
+    main --> development
+    main --> backend
+    backend --> backend...
+    backend... --> development
+    development --> tailwindcss
+    tailwindcss --> tailwindcss...
+    tailwindcss... --> development
+    development --> library-primer
+    library-primer --> library-primer...
+    library-primer... --> development
+```
+
+Μετά την κλωνοποίηση του main repository:
 
 ```
 git clone https://github.com/christodoulos/coding-factory-fullstack.git
