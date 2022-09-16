@@ -24,8 +24,8 @@ Branches που συμβάλλουν στην τελική εφαρμογή θα
 - 1η Εβδομάδα: [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
 - 2η Εβδομάδα:
   - [Angular routing](https://github.com/christodoulos/coding-factory-fullstack/tree/routing/frontend/src/app)
-  - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss) (merged in develop)
-  - Angular libraries (merged in develop)
+  - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss) (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop))
+  - Angular libraries (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop))
     - [UI library](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/projects/ui/src/lib): Βιβλιοθήκη με βασικά παραμετροποιημένα components εμφάνισης, όπως κουμπιά, μενού, πεδία φόρμας κτλ
     - [UI library demo](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/src/app)
 
