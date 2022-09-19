@@ -23,8 +23,14 @@
       "dom"
     ],
     "paths": {
+      "interfaces": [
+        "dist/interfaces"
+      ],
       "ui": [
         "dist/ui"
+      ],
+      "ui-forms": [
+        "dist/ui-forms"
       ]
     }
   },

@@ -1,0 +1,65 @@
+<div class="flex flex-col space-y-4">
+    <lib-ngx-heading [text]="'Εγγραφή νέου χρήστη'"></lib-ngx-heading>
+  
+    <form [formGroup]="form">
+      <div class="flex flex-col space-y-2">
+        <!-- Ονομα Χρήστη -->
+        <lib-ngx-input
+          [label]="'Ονομα Χρήστη'"
+          [required]="true"
+          formControlName="username"
+        ></lib-ngx-input>
+        <!-- Ονοματεπώνυμο -->
+        <div formGroupName="name" class="flex flex-col space-y-2">
+          <lib-ngx-input
+            [label]="'Ονομα'"
+            [required]="true"
+            formControlName="givenName"
+          ></lib-ngx-input>
+          <lib-ngx-input
+            [label]="'Επώνυμο'"
+            [required]="true"
+            formControlName="surName"
+          ></lib-ngx-input>
+        </div>
+        <!-- Κατηγορία Προσωπικού -->
+        <lib-ngx-select
+          *ngIf="userCategories"
+          [label]="'Κατηγορία Προσωπικού'"
+          [required]="true"
+          [selections]="userCategories"
+          formControlName="category"
+        ></lib-ngx-select>
+        <!-- Email -->
+        <lib-ngx-input
+          [label]="'Email'"
+          [required]="true"
+          formControlName="email"
+        ></lib-ngx-input>
+        <!-- Password -->
+        <lib-ngx-input
+          [label]="'Μυστικός Κωδικός'"
+          [required]="true"
+          [type]="'password'"
+          formControlName="password"
+        ></lib-ngx-input>
+        <!-- Repeat Password -->
+        <lib-ngx-input
+          [label]="'Επιβεβαίωση Μυστικού Κωδικού'"
+          [required]="true"
+          [type]="'password'"
+          formControlName="repeatPassword"
+        ></lib-ngx-input>
+      </div>
+    </form>
+    <div *ngIf="eachControlValid && form.invalid" class="text-sm text-red-600">
+      Ο μυστικός κωδικός δεν ταιριάζει
+    </div>
+    <!-- Submit Button -->
+    <lib-ngx-button
+      [label]="'Υποβολή'"
+      [notAllowed]="!form.valid"
+      (clicked)="onSubmit()"
+    ></lib-ngx-button>
+  </div>
+  

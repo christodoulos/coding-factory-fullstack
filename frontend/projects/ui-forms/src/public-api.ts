@@ -1,0 +1,8 @@
+/*
+ * Public API Surface of ui-forms
+ */
+
+export * from './lib/ui-forms.service';
+export * from './lib/ui-forms.module';
+
+export * from './lib/registration-form/registration-form.component';

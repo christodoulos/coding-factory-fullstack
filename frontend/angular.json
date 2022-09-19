@@ -127,6 +127,68 @@
           }
         }
       }
+    },
+    "ui-forms": {
+      "projectType": "library",
+      "root": "projects/ui-forms",
+      "sourceRoot": "projects/ui-forms/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ui-forms/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ui-forms/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ui-forms/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ui-forms/src/test.ts",
+            "tsConfig": "projects/ui-forms/tsconfig.spec.json",
+            "karmaConfig": "projects/ui-forms/karma.conf.js"
+          }
+        }
+      }
+    },
+    "interfaces": {
+      "projectType": "library",
+      "root": "projects/interfaces",
+      "sourceRoot": "projects/interfaces/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/interfaces/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/interfaces/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/interfaces/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/interfaces/src/test.ts",
+            "tsConfig": "projects/interfaces/tsconfig.spec.json",
+            "karmaConfig": "projects/interfaces/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "cli": {
