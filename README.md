@@ -11,16 +11,21 @@
 flowchart TB
     main --> components-input-output
     components-input-output --> components-input-output...
-    main --> development
+    main --> routing
+    routing --> routing...
+    main --> develop
     main --> backend
     backend --> backend...
-    backend... --> development
-    development --> tailwindcss
+    backend... --> develop
+    develop --> tailwindcss
     tailwindcss --> tailwindcss...
-    tailwindcss... --> development
-    development --> library-primer
+    tailwindcss... --> develop
+    develop --> library-primer
     library-primer --> library-primer...
-    library-primer... --> development
+    library-primer... --> develop
+    develop --> libraries-more
+    libraries-more --> libraries-more...
+    libraries-more... -.-> develop
 ```
 
 Μετά την κλωνοποίηση του main repository:
