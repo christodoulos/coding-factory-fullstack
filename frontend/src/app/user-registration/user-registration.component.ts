@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserRegistrationForm } from 'interfaces';
+import { BackendService } from '../backend.service';
 
 @Component({
   selector: 'app-user-registration',
@@ -23,11 +24,12 @@ export class UserRegistrationComponent implements OnInit {
     { key: '62f9de268fcc961fefb4b51c', value: 'Φύλακας' },
     { key: '62f9ed60709b3c94686a5a09', value: 'Ωρομίσθιος Υπάλληλος' },
   ];
-  constructor() {}
+  constructor(private backend: BackendService) {}
 
   ngOnInit(): void {}
 
   onUserRegistration(userRegistration: UserRegistrationForm) {
     console.log(userRegistration);
+    this.backend.registerUser(userRegistration);
   }
 }

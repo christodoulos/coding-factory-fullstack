@@ -6,11 +6,11 @@ import { UiModule } from 'ui';
 import { InterfacesModule } from 'interfaces';
 
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
-
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
-  declarations: [RegistrationFormComponent],
+  declarations: [RegistrationFormComponent, LoginFormComponent],
   imports: [CommonModule, ReactiveFormsModule, UiModule, InterfacesModule],
-  exports: [RegistrationFormComponent],
+  exports: [RegistrationFormComponent, LoginFormComponent],
 })
 export class UiFormsModule {}

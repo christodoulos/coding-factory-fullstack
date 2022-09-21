@@ -1,0 +1,22 @@
+<div class="flex flex-col space-y-4">
+  <lib-ngx-heading [text]="'Είσοδος χρήστη'"></lib-ngx-heading>
+
+  <form [formGroup]="form">
+    <lib-ngx-input
+      [label]="'Ονομα Χρήστη'"
+      [required]="true"
+      formControlName="username"
+    ></lib-ngx-input>
+    <lib-ngx-input
+      [label]="'Μυστικός Κωδικός'"
+      [required]="true"
+      [type]="'password'"
+      formControlName="password"
+    ></lib-ngx-input>
+  </form>
+  <lib-ngx-button
+    [label]="'Είσοδος'"
+    [notAllowed]="!form.valid"
+    (clicked)="onSubmit()"
+  ></lib-ngx-button>
+</div>

@@ -24,6 +24,8 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@auth0/angular-jwt": "^5.0.2",
+    "@ngneat/dialog": "^2.1.1",
     "lodash-es": "^4.17.21",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

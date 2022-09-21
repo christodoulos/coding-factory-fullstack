@@ -12,3 +12,4 @@ export * from './lib/ngx-left-menu/ngx-left-menu.component';
 export * from './lib/ngx-input/ngx-input.component';
 export * from './lib/ngx-select/ngx-select.component';
 export * from './lib/ngx-heading/ngx-heading.component';
+export * from './lib/ngx-alert/ngx-alert.component';
