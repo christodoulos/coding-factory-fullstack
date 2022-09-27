@@ -5,6 +5,7 @@ import { DialogService } from '@ngneat/dialog';
 import { UserRegistrationForm, UserLoginForm, LoginSuccess } from 'interfaces';
 import { NgxAlertComponent } from 'ui';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { AppService } from './app.service';
 
 const helper = new JwtHelperService();
 
@@ -18,10 +19,14 @@ export class BackendService {
   constructor(
     private http: HttpClient,
     private dialog: DialogService,
-    private router: Router
-  ) {}
+    private router: Router,
+    private service: AppService
+  ) {
+    console.log('In Backend service');
+  }
 
   registerUser(user: UserRegistrationForm) {
+    // this.service.isLoading$.next(true);
     this.http.post(`${USER_API}/register`, user).subscribe({
       next: (data) => {
         console.log(data);
@@ -35,6 +40,7 @@ export class BackendService {
           },
         });
         this.router.navigate(['login']);
+        // this.service.isLoading$.next(false);
       },
       error: (e) => {
         const error = e.error.message;
@@ -46,17 +52,22 @@ export class BackendService {
             heading: 'Λάθη που εντοπίστηκαν στο backend',
           },
         });
+        // this.service.isLoading$.next(false);
       },
     });
   }
 
   loginUser(user: UserLoginForm) {
+    // this.service.isLoading$.next(true);
     this.http.post<LoginSuccess>(`${USER_API}/login`, user).subscribe({
       next: (data) => {
         console.log(data);
         localStorage.setItem('access_token', data.access_token);
         const whoami = helper.decodeToken(data.access_token);
-        console.log(whoami);
+        console.log(whoami.sub);
+        localStorage.setItem('user', JSON.stringify(whoami.sub));
+        this.service.isLoggedIn$.next(true);
+        // this.service.isLoading$.next(false);
       },
       error: (e) => {
         const error = e.error.message;
@@ -68,6 +79,7 @@ export class BackendService {
             heading: 'Λάθη που εντοπίστηκαν στο backend',
           },
         });
+        // this.service.isLoading$.next(false);
       },
     });
   }

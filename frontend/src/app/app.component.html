@@ -1,8 +1,9 @@
 <div class="flex h-screen">
   <div class="m-auto w-1/2 flex flex-col space-y-2">
+    <lib-ngx-loading *ngIf="isLoading$ | async"></lib-ngx-loading>
     <lib-ngx-topbar
       [brand]="brand"
-      [menu]="topMenu"
+      [menu]="!(isLoggedIn$ | async) ? topMenu : ['Έξοδος']"
       (selection)="onTopSelection($event)"
     ></lib-ngx-topbar>
 

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app.routing';
 import { RouterModule } from '@angular/router';
@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { LoadingInterceptorService } from './loading-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,13 @@ import { WelcomeComponent } from './welcome/welcome.component';
     UiModule,
     UiFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

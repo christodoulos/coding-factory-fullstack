@@ -11,6 +11,7 @@ import { NgxInputComponent } from './ngx-input/ngx-input.component';
 import { NgxSelectComponent } from './ngx-select/ngx-select.component';
 import { NgxHeadingComponent } from './ngx-heading/ngx-heading.component';
 import { NgxAlertComponent } from './ngx-alert/ngx-alert.component';
+import { NgxLoadingComponent } from './ngx-loading/ngx-loading.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgxAlertComponent } from './ngx-alert/ngx-alert.component';
     NgxSelectComponent,
     NgxHeadingComponent,
     NgxAlertComponent,
+    NgxLoadingComponent,
   ],
   imports: [
     CommonModule,
@@ -37,6 +39,7 @@ import { NgxAlertComponent } from './ngx-alert/ngx-alert.component';
     NgxSelectComponent,
     NgxHeadingComponent,
     NgxAlertComponent,
+    NgxLoadingComponent,
   ],
 })
 export class UiModule {}
