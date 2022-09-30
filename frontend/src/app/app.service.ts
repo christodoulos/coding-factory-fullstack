@@ -48,4 +48,13 @@ export class AppService {
     this.isLoggedIn$.next(this.isUserLoggedIn());
     this.router.navigate(['']);
   }
+
+  isAdmin(): boolean {
+    const access_token = localStorage.getItem('access_token');
+
+    if (access_token) {
+      return helper.decodeToken(access_token).sub.isAdmin;
+    }
+    return false;
+  }
 }

@@ -68,6 +68,11 @@ export class BackendService {
         localStorage.setItem('user', JSON.stringify(whoami.sub));
         this.service.isLoggedIn$.next(true);
         // this.service.isLoading$.next(false);
+        if (this.service.isAdmin()) {
+          this.router.navigate(['admin']);
+        } else {
+          this.router.navigate(['user']);
+        }
       },
       error: (e) => {
         const error = e.error.message;

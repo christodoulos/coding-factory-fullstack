@@ -10,18 +10,10 @@ import { UiModule } from 'ui';
 import { UiFormsModule } from 'ui-forms';
 
 import { AppComponent } from './app.component';
-import { UserRegistrationComponent } from './user-registration/user-registration.component';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { LoadingInterceptorService } from './loading-interceptor.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserRegistrationComponent,
-    UserLoginComponent,
-    WelcomeComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
