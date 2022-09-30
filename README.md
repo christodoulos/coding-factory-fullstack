@@ -25,7 +25,10 @@ flowchart TB
     library-primer... --> develop
     develop --> libraries-more
     libraries-more --> libraries-more...
-    libraries-more... -.-> develop
+    libraries-more... --> develop
+    develop --> lazy-loading
+    lazy-loading --> lazy-loading...
+    lazy-loading... -.-> develop
 ```
 
 Μετά την κλωνοποίηση του main repository:
@@ -57,7 +60,10 @@ Branches που συμβάλλουν στην τελική εφαρμογή θα
 - 4η Εβδομάδα:
   - Angular [service για την επικοινωνία με το Flask backend](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/backend.service.ts) και την [ασύγχρονη τήρηση](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/app.service.ts) της πληροφορίας για το συνδεδεμένο χρήστη και την ύπαρξη επικοινωνίας με το backend (χρήση [BehaviourSubject](https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject)).
   - Χρήση `async pipe` στο [template](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/app.component.html).
-  - [Lazy Loading]
+  - [Lazy Loading](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading): Δημιουργία 3 module στο app:
+    - [noauth](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading/frontend/src/app/noauth): περιλαμβάνει όλα τα components που είναι διαθέσιμα χωρίς έλεγχο πρόσβασης
+    - [admin](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading/frontend/src/app/admin): περιλαμβάνει όλα τα components που είναι διαθέσιμα με έλεγχο πρόσβασης και απαιτούν εξουσιοδότηση διαχειριστή
+    - [user](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading/frontend/src/app/user): περιλαμβάνει όλα τα components που είναι διαθέσιμα με έλεγχο πρόσβασης και απαιτούν εξουσιοδότηση χρήστη
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
