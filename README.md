@@ -53,6 +53,11 @@ Branches που συμβάλλουν στην τελική εφαρμογή θα
     - [UI library demo](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/src/app)
 - 3η Εβδομάδα:
   - [Flask backend](https://github.com/christodoulos/coding-factory-fullstack/tree/backend) (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop)): Όλα τα FLASK endpoints που εξυπηρετούν τα HTTP Angular services του frontend.
+  - [More Libraries](https://github.com/christodoulos/coding-factory-fullstack/tree/libraries-more) (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop)): Βιβλιοθήκη φορμών και τύπων δεδομένων. Παράλληλο build με output multiplexing με χρήση του `npm-run-all`.
+- 4η Εβδομάδα:
+  - Angular [service για την επικοινωνία με το Flask backend](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/backend.service.ts) και την [ασύγχρονη τήρηση](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/app.service.ts) της πληροφορίας για το συνδεδεμένο χρήστη και την ύπαρξη επικοινωνίας με το backend (χρήση [BehaviourSubject](https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject)).
+  - Χρήση `async pipe` στο [template](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/app.component.html).
+  - [Lazy Loading]
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
