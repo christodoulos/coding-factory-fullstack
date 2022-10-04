@@ -1,4 +1,4 @@
 <lib-registration-form
-  [userCategories]="userCategories"
+  [userCategories]="userCategories$ | async"
   (userRegistration)="onUserRegistration($event)"
 ></lib-registration-form>

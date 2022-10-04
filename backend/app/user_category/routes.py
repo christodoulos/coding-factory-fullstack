@@ -8,6 +8,7 @@ user_category_blueprint = Blueprint("/user/category", __name__)
 @user_category_blueprint.route("", methods=["POST"])
 def add_user_category():
     body = request.get_json()
+    print(body)
     try:
         doc = UserCategory(**body).save()
         return jsonify(doc), 201

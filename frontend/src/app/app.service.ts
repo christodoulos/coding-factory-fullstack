@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { DialogService } from '@ngneat/dialog';
+import { NgxAlertComponent } from 'ui';
+import { UserCategory } from 'interfaces';
 
 const helper = new JwtHelperService();
 
@@ -11,7 +14,8 @@ const helper = new JwtHelperService();
 export class AppService {
   isLoggedIn$ = new BehaviorSubject(this.isUserLoggedIn());
   isLoading$ = new BehaviorSubject(false);
-  constructor(private router: Router) {
+  userCategories$ = new BehaviorSubject([] as UserCategory[]);
+  constructor(private router: Router, private dialog: DialogService) {
     console.log('In App service');
   }
 
@@ -56,5 +60,16 @@ export class AppService {
       return helper.decodeToken(access_token).sub.isAdmin;
     }
     return false;
+  }
+
+  errorModal(error: string) {
+    this.dialog.open(NgxAlertComponent, {
+      size: 'sm',
+      data: {
+        type: 'error',
+        message: error,
+        heading: 'Λάθη που εντοπίστηκαν στο backend',
+      },
+    });
   }
 }

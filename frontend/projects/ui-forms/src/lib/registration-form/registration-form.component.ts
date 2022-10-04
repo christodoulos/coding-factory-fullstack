@@ -26,7 +26,7 @@ function matchValidator(source: string, target: string): ValidatorFn {
   templateUrl: './registration-form.component.html',
 })
 export class RegistrationFormComponent {
-  @Input() userCategories: { key: string; value: string }[] | undefined;
+  @Input() userCategories: { key: string; value: string }[] | undefined | null;
   @Output() userRegistration = new EventEmitter<UserRegistrationForm>();
 
   form = new FormGroup(

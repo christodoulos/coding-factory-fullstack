@@ -7,9 +7,10 @@ import { UserCategoryCreateComponent } from './user-category-create/user-categor
 
 import { UiModule } from 'ui';
 import { UiFormsModule } from 'ui-forms';
+import { UserCategoryListComponent } from './user-category-list/user-category-list.component';
 
 @NgModule({
-  declarations: [AdminDashboardComponent, UserCategoryCreateComponent],
+  declarations: [AdminDashboardComponent, UserCategoryCreateComponent, UserCategoryListComponent],
   imports: [CommonModule, AdminRoutingModule, UiModule, UiFormsModule],
 })
 export class AdminModule {}
