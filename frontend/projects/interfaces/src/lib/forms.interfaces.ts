@@ -10,3 +10,7 @@ export interface UserLoginForm {
   username: string;
   password: string;
 }
+
+export interface UserCategoryCreateForm {
+  name: string;
+}

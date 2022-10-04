@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { UiModule } from 'ui';
 import { UiFormsModule } from 'ui-forms';
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     ReactiveFormsModule,
     NoauthRoutingModule,
     UiModule,

@@ -7,10 +7,19 @@ import { InterfacesModule } from 'interfaces';
 
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { UserCategoryCreateFormComponent } from './user-category-create-form/user-category-create-form.component';
 
 @NgModule({
-  declarations: [RegistrationFormComponent, LoginFormComponent],
+  declarations: [
+    RegistrationFormComponent,
+    LoginFormComponent,
+    UserCategoryCreateFormComponent,
+  ],
   imports: [CommonModule, ReactiveFormsModule, UiModule, InterfacesModule],
-  exports: [RegistrationFormComponent, LoginFormComponent],
+  exports: [
+    RegistrationFormComponent,
+    LoginFormComponent,
+    UserCategoryCreateFormComponent,
+  ],
 })
 export class UiFormsModule {}
