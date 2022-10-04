@@ -37,7 +37,9 @@ export class UserRegistrationComponent implements OnInit {
       )
     )
   );
-  constructor(private backend: BackendService, private service: AppService) {}
+  constructor(private backend: BackendService, private service: AppService) {
+    this.backend.getUserCategories();
+  }
 
   ngOnInit(): void {}
 
