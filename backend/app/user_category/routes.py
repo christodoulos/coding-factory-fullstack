@@ -13,7 +13,7 @@ def add_user_category():
         doc = UserCategory(**body).save()
         return jsonify(doc), 201
     except db.NotUniqueError:
-        return jsonify(message="User Category already exist"), 400
+        return jsonify(message="Η κατηγορία χρήστη υπάρχει ήδη"), 400
     except db.ValidationError as exc:
         return jsonify(message=exc.message), 400
 

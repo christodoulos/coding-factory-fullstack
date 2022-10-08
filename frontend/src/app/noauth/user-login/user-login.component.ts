@@ -9,10 +9,7 @@ import { BackendService } from '../../backend.service';
 export class UserLoginComponent {
   constructor(private backend: BackendService) {}
 
-  ngOnInit(): void {}
-
   onCredentials(credentials: UserLoginForm) {
-    console.log(credentials);
     this.backend.loginUser(credentials);
   }
 }

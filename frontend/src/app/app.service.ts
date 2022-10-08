@@ -41,6 +41,12 @@ export class AppService {
   isUserLoggedIn(): boolean {
     const access_token = localStorage.getItem('access_token');
     if (access_token !== null) {
+      if (helper.isTokenExpired(access_token)) {
+        this.infoModal(
+          'Έληξε η ισχύς του token πρόσβασης και έγινε αυτόματη έξοδος. Παρακαλώ κάντε ξανά τη διαδικασία εισόδου.'
+        );
+        this.logoutUser();
+      }
       return !helper.isTokenExpired(access_token);
     }
     return false;
@@ -62,13 +68,35 @@ export class AppService {
     return false;
   }
 
-  errorModal(error: string) {
+  errorModal(message: string) {
     this.dialog.open(NgxAlertComponent, {
       size: 'sm',
       data: {
         type: 'error',
-        message: error,
-        heading: 'Λάθη που εντοπίστηκαν στο backend',
+        message: message,
+        heading: 'Κάτι δεν πήγε καλά',
+      },
+    });
+  }
+
+  successModal(message: string) {
+    this.dialog.open(NgxAlertComponent, {
+      size: 'sm',
+      data: {
+        type: 'success',
+        message: message,
+        heading: 'Επιτυχής ολοκλήρωση',
+      },
+    });
+  }
+
+  infoModal(message: string) {
+    this.dialog.open(NgxAlertComponent, {
+      size: 'sm',
+      data: {
+        type: 'info',
+        message: message,
+        heading: 'Πληροφορία από το σύστημα',
       },
     });
   }

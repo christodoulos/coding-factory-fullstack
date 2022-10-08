@@ -14,4 +14,4 @@ class Config:
         "host": environ.get("MONGODB_SETTINGS_HOST"),
     }
     JWT_SECRET_KEY = environ.get("JWT_SECRET_KEY")
-    JWT_ACCESS_TOKEN_EXPIRES = datetime.timedelta(minutes=15)
+    JWT_ACCESS_TOKEN_EXPIRES = datetime.timedelta(minutes=1)

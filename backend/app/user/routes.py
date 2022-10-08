@@ -18,9 +18,9 @@ def register_new_user():
     print(body)
     try:
         User(**body).save()
-        return jsonify(success="User registered successfully"), 201
+        return jsonify(success="Επιτυχής εγγραφή χρήστη"), 201
     except db.NotUniqueError:
-        return jsonify(message="User or Email already exist"), 400
+        return jsonify(message="Το όνομα χρήστη ή/και το email υπάρχει ήδη"), 400
     except db.ValidationError as exc:
         return jsonify(message=exc.message), 400
 
@@ -35,4 +35,9 @@ def login():
             access_token = create_access_token(identity=user)
             return jsonify({"access_token": access_token}), 200
     except:
-        return jsonify(message="Invalid username or password"), 401
+        return (
+            jsonify(
+                message="Λάθος στο όνομα χρήστη η/και στο μυστικό κωδικό του χρήστη"
+            ),
+            401,
+        )

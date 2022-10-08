@@ -1,9 +1,9 @@
-<lib-ngx-heading [text]="'Λίστα κατηγορiwn xrhstwn'"></lib-ngx-heading>
+<lib-ngx-heading [text]="'Λίστα κατηγοριών χρηστών'"></lib-ngx-heading>
 
 <table class="text-sm w-full divide-y-2">
   <tr class="bg-slate-300">
-    <th>Kwdikos</th>
-    <th>Onomasia</th>
+    <th>Κωδικός</th>
+    <th>Ονομασία</th>
   </tr>
   <tr *ngFor="let category of userCategories$ | async">
     <td>
