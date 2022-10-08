@@ -47,23 +47,26 @@ Branches που συμβάλλουν στην τελική εφαρμογή θα
 
 Μέχρι στιγμής υπάρχουν τα παρακάτω branches:
 
-- 1η Εβδομάδα: [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
-- 2η Εβδομάδα:
+- [Angular Components, Input και Output](https://github.com/christodoulos/coding-factory-fullstack/tree/components-input-ouput/frontend/src/app)
+- Routing και tailwindcss:
   - [Angular routing](https://github.com/christodoulos/coding-factory-fullstack/tree/routing/frontend/src/app)
   - [Angular με tailwindcss](https://github.com/christodoulos/coding-factory-fullstack/tree/tailwindcss) (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop))
   - Angular libraries (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop))
     - [UI library](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/projects/ui/src/lib): Βιβλιοθήκη με βασικά παραμετροποιημένα components εμφάνισης, όπως κουμπιά, μενού, πεδία φόρμας κτλ
     - [UI library demo](https://github.com/christodoulos/coding-factory-fullstack/tree/library-primer/frontend/src/app)
-- 3η Εβδομάδα:
+- Εμπλουτισμός του Flask backend και παράλληλη χρήση πολλών βιβλιοθηκών Angular:
   - [Flask backend](https://github.com/christodoulos/coding-factory-fullstack/tree/backend) (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop)): Όλα τα FLASK endpoints που εξυπηρετούν τα HTTP Angular services του frontend.
   - [More Libraries](https://github.com/christodoulos/coding-factory-fullstack/tree/libraries-more) (merged in [develop](https://github.com/christodoulos/coding-factory-fullstack/tree/develop)): Βιβλιοθήκη φορμών και τύπων δεδομένων. Παράλληλο build με output multiplexing με χρήση του `npm-run-all`.
-- 4η Εβδομάδα:
+- Services για την επικοινωνία με το backend, BehaviourSubjects, Async Pipes, Lazy Loading, Route Guards:
   - Angular [service για την επικοινωνία με το Flask backend](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/backend.service.ts) και την [ασύγχρονη τήρηση](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/app.service.ts) της πληροφορίας για το συνδεδεμένο χρήστη και την ύπαρξη επικοινωνίας με το backend (χρήση [BehaviourSubject](https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject)).
   - Χρήση `async pipe` στο [template](https://github.com/christodoulos/coding-factory-fullstack/blob/libraries-more/frontend/src/app/app.component.html).
   - [Lazy Loading](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading): Δημιουργία 3 module στο app:
     - [noauth](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading/frontend/src/app/noauth): περιλαμβάνει όλα τα components που είναι διαθέσιμα χωρίς έλεγχο πρόσβασης
     - [admin](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading/frontend/src/app/admin): περιλαμβάνει όλα τα components που είναι διαθέσιμα με έλεγχο πρόσβασης και απαιτούν εξουσιοδότηση διαχειριστή
     - [user](https://github.com/christodoulos/coding-factory-fullstack/tree/lazy-loading/frontend/src/app/user): περιλαμβάνει όλα τα components που είναι διαθέσιμα με έλεγχο πρόσβασης και απαιτούν εξουσιοδότηση χρήστη
+  - Route guards:
+    - [noauth](https://github.com/christodoulos/coding-factory-fullstack/blob/lazy-loading/frontend/src/app/noauth/noauth.guard.ts): ρυθμίζει το navigation προς τα components του noauth module
+    - [admin](https://github.com/christodoulos/coding-factory-fullstack/blob/lazy-loading/frontend/src/app/admin/admin.guard.ts): ρυθμίζει το navigation προς τα components του admin module
 
 ### Ρυθμίσεις της υπηρεσίας Atlas
 
