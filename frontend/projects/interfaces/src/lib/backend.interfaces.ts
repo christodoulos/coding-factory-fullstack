@@ -13,3 +13,14 @@ export interface UserCategory {
   _id: OID;
   name: string;
 }
+
+export interface SubDepartment {
+  id: OID;
+  name: string;
+}
+
+export interface Department {
+  _id: OID;
+  name: string;
+  subdepartments: SubDepartment[];
+}

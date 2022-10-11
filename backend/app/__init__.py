@@ -15,8 +15,10 @@ bcrypt = Bcrypt(announcements_app)
 
 from app.user.routes import user_blueprint
 from app.user_category.routes import user_category_blueprint
+from app.department.routes import department_blueprint
 
 announcements_app.register_blueprint(user_blueprint, url_prefix="/user")
 announcements_app.register_blueprint(
     user_category_blueprint, url_prefix="/user/category"
 )
+announcements_app.register_blueprint(department_blueprint, url_prefix="/department")

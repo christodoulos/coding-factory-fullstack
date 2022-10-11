@@ -1,0 +1,52 @@
+<div class="flex flex-col space-y-4">
+  <lib-ngx-heading [text]="'Εισαγωγή νέας Διεύθυνσης'"></lib-ngx-heading>
+
+  <form [formGroup]="form">
+    <div class="flex flex-col space-y-2">
+      <lib-ngx-input
+        [label]="'Ονομα Διεύθυνσης'"
+        [required]="true"
+        formControlName="name"
+      ></lib-ngx-input>
+    </div>
+
+    <div class="flex space-x-2 mt-1">
+      <lib-ngx-button
+        class="w-40"
+        [label]="'Προσθήκη Τμήματος'"
+        (clicked)="onAddSubdepartment()"
+      ></lib-ngx-button>
+    </div>
+
+    <div *ngIf="subdepartments.length">
+      <span class="mt-2 block text-sm">Τμήματα</span>
+      <div formArrayName="subdepartments">
+        <div
+          class="flex flex-row items-center justify-between mt-2 {{
+            i % 2 === 0 ? 'bg-slate-200' : ''
+          }}"
+          *ngFor="let control of subdepartments.controls; let i = index"
+        >
+          <div [formGroupName]="i">
+            <lib-ngx-input
+              [label]="'Ονομα Τμήματος'"
+              formControlName="name"
+            ></lib-ngx-input>
+          </div>
+          <lib-ngx-button
+            class="w-24"
+            [label]="'Διαγραφή'"
+            (clicked)="deleteSub(i)"
+          ></lib-ngx-button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Submit Button -->
+  <lib-ngx-button
+    [label]="'Υποβολή'"
+    [notAllowed]="!form.valid"
+    (clicked)="onSubmit()"
+  ></lib-ngx-button>
+</div>

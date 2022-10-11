@@ -14,3 +14,17 @@ export interface UserLoginForm {
 export interface UserCategoryCreateForm {
   name: string;
 }
+
+export interface UserCategoryDeleteForm {
+  id: string;
+}
+
+export interface UserCategoryUpdateForm {
+  id: string;
+  name: string;
+}
+
+export interface DepartmentCreateForm {
+  name: string;
+  subdepartments: string[];
+}

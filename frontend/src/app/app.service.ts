@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { DialogService } from '@ngneat/dialog';
 import { NgxAlertComponent } from 'ui';
-import { UserCategory } from 'interfaces';
+import { Department, UserCategory } from 'interfaces';
 
 const helper = new JwtHelperService();
 
@@ -15,6 +15,8 @@ export class AppService {
   isLoggedIn$ = new BehaviorSubject(this.isUserLoggedIn());
   isLoading$ = new BehaviorSubject(false);
   userCategories$ = new BehaviorSubject([] as UserCategory[]);
+  departments$ = new BehaviorSubject([] as Department[]);
+  department$ = new BehaviorSubject({} as Department);
   constructor(private router: Router, private dialog: DialogService) {
     console.log('In App service');
   }

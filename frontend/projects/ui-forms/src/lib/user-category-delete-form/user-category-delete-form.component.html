@@ -1,0 +1,17 @@
+<div class="flex flex-col space-y-4">
+  <lib-ngx-heading [text]="'Διαγραφή Κατηγορίας Χρήστη'"></lib-ngx-heading>
+
+  <form [formGroup]="form">
+    <lib-ngx-input
+      [label]="'Κωδικός κατηγορίας'"
+      [required]="true"
+      formControlName="id"
+    ></lib-ngx-input>
+  </form>
+
+  <lib-ngx-button
+    [label]="'Διαγραφή'"
+    [notAllowed]="!form.valid"
+    (clicked)="onSubmit()"
+  ></lib-ngx-button>
+</div>

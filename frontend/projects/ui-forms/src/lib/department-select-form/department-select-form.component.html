@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+  <lib-ngx-select
+    *ngIf="departments"
+    [label]="'Επιλέξτε Διεύθυνση'"
+    [selections]="departments"
+    [required]="true"
+    formControlName="department"
+  ></lib-ngx-select>
+</form>
